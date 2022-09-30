@@ -3704,6 +3704,8 @@ if test "$gmp_asm_syntax_testing" != no; then
 	  case $host in
 	    *-*-darwin*)
 	      GMP_INCLUDE_MPN(arm64/darwin.m4) ;;
+	    *-pc-mingw32)
+	      GMP_INCLUDE_MPN(arm64/coff.m4) ;;
 	    *)
 	      GMP_INCLUDE_MPN(arm64/arm64-defs.m4) ;;
           esac
